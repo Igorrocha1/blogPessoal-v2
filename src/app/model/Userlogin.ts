@@ -1,4 +1,4 @@
-export class Userlogin{
+export class UserLogin{
     public id: number
     public nome: string
     public usuario: string
@@ -6,4 +6,4 @@ export class Userlogin{
     public token: string
     public foto: string
     public tipo: string
-}
+  }
