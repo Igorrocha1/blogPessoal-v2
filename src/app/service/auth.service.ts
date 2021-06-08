@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { User } from '../model/User';
-import { Userlogin } from '../model/Userlogin';
+import { UserLogin } from '../model/Userlogin';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +14,8 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
-  entrar(userLogin: Userlogin): Observable<Userlogin>{
-    return this.http.post<Userlogin>('http://localhost:8080/usuarios/logar', userLogin)
+  entrar(userLogin: UserLogin): Observable<UserLogin>{
+    return this.http.post<UserLogin>('http://localhost:8080/usuarios/logar', userLogin)
   }
 
   cadastrar(user: User): Observable<User>{

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
-import { Userlogin } from '../model/Userlogin';
+import { UserLogin } from '../model/Userlogin';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { AuthService } from '../service/auth.service';
 })
 export class EntrarComponent implements OnInit {
 
-  userLogin: Userlogin = new Userlogin()
+  userLogin: UserLogin = new UserLogin()
 
   constructor(
     private auth: AuthService,
@@ -23,7 +23,7 @@ export class EntrarComponent implements OnInit {
   }
 
   entrar() {
-    this.auth.entrar(this.userLogin).subscribe((resp: Userlogin) => {
+    this.auth.entrar(this.userLogin).subscribe((resp: UserLogin) => {
       this.userLogin = resp
 
       environment.token = this.userLogin.token
