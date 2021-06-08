@@ -15,7 +15,9 @@ import { InicioComponent } from './inicio/inicio.component';
 import { from } from 'rxjs';
 import { TemaComponent } from './tema/tema.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
-import { TemaDeletComponent } from './delet/tema-delet/tema-delet.component';
+import { TemaDeletComponent } from './delete/tema-delete/tema-delet.component';
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { TemaDeletComponent } from './delet/tema-delet/tema-delet.component';
     InicioComponent,
     TemaComponent,
     TemaEditComponent,
-    TemaDeletComponent
+    TemaDeletComponent,
+    PostagemEditComponent,
+    PostagemDeleteComponent
   ],
   imports: [
     BrowserModule,
